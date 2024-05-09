@@ -1,4 +1,4 @@
-import products from "../../pages/products";
+import products from "../pages/products"
 
 export type ProductType = {
   id: number
@@ -10,7 +10,7 @@ export type ProductType = {
 }
 
 export const fetchProducts = async () => {
-  const products: ProductType[] = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`).then(res => res.json())
+  const products: ProductType = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`).then(res => res.json())
   return products
 }
 
