@@ -1,4 +1,11 @@
-import products from "../pages/products"
+// pages/api/products.ts
+
+import { NextApiRequest, NextApiResponse } from 'next';
+import products from '../../../database.json'
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(products)
+}
 
 export type ProductType = {
   id: number
@@ -10,7 +17,7 @@ export type ProductType = {
 }
 
 export const fetchProducts = async () => {
-  const products: ProductType = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`).then(res => res.json())
+  const products: ProductType[] = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`).then(res => res.json())
   return products
 }
 
