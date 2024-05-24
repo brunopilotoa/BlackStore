@@ -45,17 +45,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         >
           Compre agora
         </Button>
-        <Button
-            color="dark"
-            className="my-3 pb-2"
-            onClick={() => {
-              addProduct(product)
-              setToastIsOpen(true)
-              setTimeout(() => setToastIsOpen(false), 1000 * 3)
-            }}
-        >
-          Compre agora
-        </Button>
+
         <SuccessToast toastIsOpen={toastIsOpen} setToastIsOpen={setToastIsOpen} />
       </Col>
     </Row>

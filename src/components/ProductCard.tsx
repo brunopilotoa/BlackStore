@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 <>
     <Card>
       <Link href={`/products/${id}`}>
-        <Image className="card-img-top" src={imageUrl} alt="Product" height={500} width={600} />
+        <Image className="card-img-top" src={imageUrl} alt={product.name} height={500} width={600} />
       </Link>
 
       <CardBody>
@@ -44,19 +44,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             setToastIsOpen(true)
             setTimeout(() => setToastIsOpen(false), 1000 * 3)
           }}
-        >
-          Adicionar ao Carrinho
-        </Button>
-
-        <Button
-            color="dark"
-            className="pb-2"
-            block
-            onClick={() => {
-              addProduct(product)
-              setToastIsOpen(true)
-              setTimeout(() => setToastIsOpen(false), 1000 * 3)
-            }}
         >
           Adicionar ao Carrinho
         </Button>
