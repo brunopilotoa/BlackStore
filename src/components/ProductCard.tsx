@@ -41,6 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           className="pb-2"
           block
           onClick={() => {
+            addProduct(product)
             setToastIsOpen(true)
             setTimeout(() => setToastIsOpen(false), 1000 * 3)
           }}

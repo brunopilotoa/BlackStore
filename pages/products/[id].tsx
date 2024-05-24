@@ -22,12 +22,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
 const products = await fetchProducts()  
 
-const paths = products.map(product => {
-return { params: { id: product.id.toString() } }
+const paths = products.map (product => {
+    return { params: { id: product.id.toString() } }
 })
 
-return { paths, fallback: false }
+return { 
+    paths, 
+    fallback: false }
 }
+
+
 const Product: NextPage = (props: {
 children?: ReactNode
 product?: ProductType

@@ -11,12 +11,10 @@ type CartContextType = {
 
 const CartContext = createContext<CartContextType>({} as CartContextType)
 
-// src/hooks/useCart.tsx
 
-// ...
 
 export const CartContextProvider = (props: {
-    children: ReactNode
+    children?: ReactNode
 }) => {
     const [cart, setCart] = useState<ProductType[]>([])
 
