@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     return { redirect: { destination: '/products', permanent: false } }
 }
 export const getStaticPaths: GetStaticPaths = async () => {
-const products = await fetchProducts()
+const products = await fetchProducts()  
 
 const paths = products.map(product => {
 return { params: { id: product.id.toString() } }
