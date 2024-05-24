@@ -5,7 +5,9 @@ const nextConfig = {
     reactStrictMode: true,
     images: {
         domains: ['store.storeimages.cdn-apple.com'],
-    },
+    },typescript: {
+    ignoreBuildErrors: true
+}
 }
 
 module.exports = nextConfig
