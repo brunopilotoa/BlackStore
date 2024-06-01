@@ -23,7 +23,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 const products = await fetchProducts()  
 
 const paths = products.map (product => {
-    return { params: { id: product.id.toString() } }
+    return { 
+        params: { 
+            id: product.id.toString() 
+        } }
 })
 
 return { 

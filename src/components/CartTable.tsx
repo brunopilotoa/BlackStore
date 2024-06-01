@@ -28,7 +28,7 @@ const CartTableRow = (props: {
                             width={600}
                         />
                     </Col>
-                    <Col xs={8} md={10} lg={11}>
+                    <Col xs={0} md={0} lg={0}>
                         {props.entry.product.name}
                     </Col>
                 </Row>
